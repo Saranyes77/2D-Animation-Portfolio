@@ -17,7 +17,7 @@ body {
     background: radial-gradient(circle at top, #1a1a1a, #000);
     color: #f2f2f2;
     font-family: 'Times New Roman', serif;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 /* ---------- ALL HEADINGS CAPITAL ---------- */
@@ -34,19 +34,19 @@ h3,
     display: grid;
     place-content: center;
     text-align: center;
-    gap: clamp(0.8rem, 2vw, 1.5rem);
+    gap: clamp(0.6rem, 1.5vw, 1rem);
     font-family: 'Short Stack', cursive;
 }
 
 .small-title {
-    letter-spacing: 0.2em;
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    letter-spacing: 0.15em;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     opacity: 0.6;
 }
 
 .hero h1 {
-    font-size: clamp(4rem, 10vw, 7.5rem);
-    letter-spacing: 0.15em;
+    font-size: clamp(3rem, 8vw, 5rem); /* reduced size */
+    letter-spacing: 0.12em;
 }
 
 .hero span {
@@ -54,42 +54,42 @@ h3,
 }
 
 .author {
-    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
     opacity: 0.7;
 }
 
 /* ---------- PROJECT SECTIONS ---------- */
 .project-section {
-    padding-block: clamp(5rem, 12vw, 9rem);
-    padding-inline: clamp(1.5rem, 6vw, 8rem);
+    padding-block: clamp(4rem, 10vw, 7rem); /* slightly smaller spacing */
+    padding-inline: clamp(1.5rem, 5vw, 6rem);
     display: grid;
-    gap: clamp(1.5rem, 3vw, 3rem);
+    gap: clamp(1rem, 2vw, 2rem);
     font-family: 'Times New Roman', serif;
 }
 
 .project-section h2 {
-    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    font-size: clamp(2rem, 4vw, 2.8rem); /* reduced size */
     color: var(--accent);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
 }
 
 .project-section p {
     max-width: 70ch;
-    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    font-size: clamp(0.95rem, 1.8vw, 1rem); /* slightly smaller */
     opacity: 0.85;
 }
 
 /* ---------- MEDIA LAYOUT ---------- */
 .media-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: clamp(1.2rem, 3vw, 2.5rem);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* smaller boxes */
+    gap: clamp(1rem, 2vw, 2rem);
 }
 
 .media-box {
     aspect-ratio: 1 / 1;
     background: linear-gradient(135deg, #111, #333);
-    border-radius: clamp(10px, 2vw, 16px);
+    border-radius: clamp(8px, 1.5vw, 12px);
     transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
@@ -104,12 +104,12 @@ h3,
 
 /* ---------- SCROLL / MARGIN ---------- */
 section {
-    scroll-margin-top: 4rem;
+    scroll-margin-top: 3rem;
 }
 
 /* ---------- MOBILE REFINEMENT ---------- */
 @media (max-width: 480px) {
     .hero h1 {
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
     }
 }
