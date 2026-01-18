@@ -20,12 +20,13 @@ body {
     line-height: 1.6;
 }
 
-/* ---------- ALL HEADINGS CAPITAL ---------- */
+/* ---------- ALL HEADINGS CAPITAL & FONT ---------- */
 h1,
 h2,
 h3,
 .small-title {
     text-transform: uppercase;
+    font-family: 'Short Stack', cursive;
 }
 
 /* ---------- HERO ---------- */
@@ -60,12 +61,11 @@ h3,
 
 /* ---------- PROJECT SECTIONS ---------- */
 .project-section {
-    position: relative; /* for pseudo element */
+    position: relative;
     padding-block: clamp(2rem, 5vw, 3rem);
     padding-inline: clamp(1.5rem, 5vw, 6rem);
     display: grid;
     gap: clamp(0.8rem, 1.5vw, 1.5rem);
-    font-family: 'Times New Roman', serif;
 }
 
 /* Section headings */
@@ -82,32 +82,11 @@ h3,
     opacity: 0.85;
 }
 
-/* ---------- CREATIVE MEDIA GRID ---------- */
+/* ---------- MEDIA GRID ---------- */
 .media-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* uniform grid */
     gap: clamp(0.8rem, 1.5vw, 1.5rem);
-}
-
-/* Asymmetrical creative layout per section */
-.project-section:nth-of-type(3) .media-row {
-    grid-template-columns: 2fr 1fr; /* example: larger first box */
-    grid-auto-rows: 220px;
-}
-
-.project-section:nth-of-type(4) .media-row {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 180px;
-}
-
-.project-section:nth-of-type(5) .media-row {
-    grid-template-columns: 1fr 2fr;
-    grid-auto-rows: 200px;
-}
-
-.project-section:nth-of-type(6) .media-row {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    grid-auto-rows: 140px;
 }
 
 /* Media box styling */
