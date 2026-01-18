@@ -17,6 +17,14 @@ body {
     line-height: 1.8;
 }
 
+/* ---------- ALL HEADINGS CAPITAL ---------- */
+h1,
+h2,
+h3,
+.small-title {
+    text-transform: uppercase;
+}
+
 /* ---------- HERO ---------- */
 .hero {
     min-height: 100vh;
@@ -57,7 +65,7 @@ body {
 .project-section h2 {
     font-size: clamp(2.4rem, 5vw, 3.4rem);
     color: var(--accent);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
 }
 
 .project-section p {
@@ -87,11 +95,6 @@ body {
 .media-box:hover {
     opacity: 0.45;
     transform: scale(0.96);
-}
-
-/* ---------- SCROLL FEEL (SUBTLE) ---------- */
-section {
-    scroll-margin-top: 4rem;
 }
 
 /* ---------- MOBILE REFINEMENT ---------- */
