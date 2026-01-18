@@ -30,12 +30,12 @@ h3,
 
 /* ---------- HERO ---------- */
 .hero {
-    min-height: 100vh;
+    min-height: clamp(50vh, 60vh, 80vh); /* smaller than full screen */
     display: grid;
     place-content: center;
     text-align: center;
-    
     font-family: 'Short Stack', cursive;
+    gap: clamp(0.6rem, 1.5vw, 1rem);
 }
 
 .small-title {
@@ -45,7 +45,7 @@ h3,
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 8vw, 5rem); /* reduced size */
+    font-size: clamp(3rem, 8vw, 5rem);
     letter-spacing: 0.12em;
 }
 
@@ -60,30 +60,30 @@ h3,
 
 /* ---------- PROJECT SECTIONS ---------- */
 .project-section {
-    padding-block: clamp(4rem, 10vw, 7rem); /* slightly smaller spacing */
+    padding-block: clamp(2rem, 5vw, 3rem); /* tighter vertical spacing */
     padding-inline: clamp(1.5rem, 5vw, 6rem);
     display: grid;
-    gap: clamp(1rem, 2vw, 2rem);
+    gap: clamp(0.8rem, 1.5vw, 1.5rem);
     font-family: 'Times New Roman', serif;
 }
 
 .project-section h2 {
-    font-size: clamp(2rem, 4vw, 2.8rem); /* reduced size */
+    font-size: clamp(2rem, 4vw, 2.8rem);
     color: var(--accent);
     letter-spacing: 0.08em;
 }
 
 .project-section p {
     max-width: 70ch;
-    font-size: clamp(0.95rem, 1.8vw, 1rem); /* slightly smaller */
+    font-size: clamp(0.95rem, 1.8vw, 1rem);
     opacity: 0.85;
 }
 
 /* ---------- MEDIA LAYOUT ---------- */
 .media-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* smaller boxes */
-    gap: clamp(1rem, 2vw, 2rem);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: clamp(0.8rem, 1.5vw, 1.5rem);
 }
 
 .media-box {
@@ -111,5 +111,13 @@ section {
 @media (max-width: 480px) {
     .hero h1 {
         letter-spacing: 0.06em;
+    }
+
+    .project-section h2 {
+        font-size: clamp(1.6rem, 5vw, 2rem);
+    }
+
+    .project-section p {
+        font-size: clamp(0.9rem, 4vw, 1rem);
     }
 }
