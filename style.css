@@ -34,7 +34,7 @@ h3,
     display: grid;
     place-content: center;
     text-align: center;
-    gap: clamp(0.6rem, 1.5vw, 1rem);
+    
     font-family: 'Short Stack', cursive;
 }
 
