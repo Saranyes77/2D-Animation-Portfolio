@@ -74,18 +74,20 @@ h3,
     opacity: 0.7;
     position: relative;
     display: inline-block;
+    margin-top: 0.5rem;
 }
 
-/* Line under author name */
+/* Prominent line under author name */
 .author::after {
     content: '';
     display: block;
-    width: 40%;
-    height: 2px;
+    width: 60%;          /* wider, like the title line */
+    height: 4px;         /* thicker line */
     background: var(--accent);
-    margin: clamp(0.3rem, 0.5vw, 0.5rem) auto 0 auto;
+    margin: clamp(0.5rem, 1vw, 1rem) auto 0 auto; /* spacing below text */
     border-radius: 2px;
 }
+
 
 
 /* ---------- PROJECT SECTIONS ---------- */
