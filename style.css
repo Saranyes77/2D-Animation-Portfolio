@@ -1,101 +1,102 @@
-/* ---------- GLOBAL ---------- */
+/* ---------- GLOBAL RESET ---------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --accent: #ff3b3b;
+}
+
+/* ---------- BODY ---------- */
 body {
     background: radial-gradient(circle at top, #1a1a1a, #000);
     color: #f2f2f2;
     font-family: 'Poppins', Arial, sans-serif;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 /* ---------- HERO ---------- */
 .hero {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-content: center;
     text-align: center;
+    gap: clamp(0.8rem, 2vw, 1.5rem);
 }
 
 .small-title {
-    letter-spacing: 2px;
+    letter-spacing: 0.2em;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     opacity: 0.6;
 }
 
 .hero h1 {
-    font-size: clamp(3.5rem, 8vw, 6.5rem);
-    letter-spacing: 3px;
-    margin: 10px 0;
+    font-size: clamp(4rem, 10vw, 7.5rem);
+    letter-spacing: 0.15em;
 }
 
 .hero span {
-    color: #ff3b3b;
+    color: var(--accent);
 }
 
 .author {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     opacity: 0.7;
 }
 
 /* ---------- SECTIONS ---------- */
 .project-section {
-    padding: 100px 8%;
+    padding-block: clamp(5rem, 12vw, 9rem);
+    padding-inline: clamp(1.5rem, 6vw, 8rem);
+    display: grid;
+    gap: clamp(1.5rem, 3vw, 3rem);
 }
 
 .project-section h2 {
-    font-size: 2.4rem;
-    margin-bottom: 30px;
-    color: #ff3b3b;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    color: var(--accent);
+    letter-spacing: 0.05em;
 }
 
 .project-section p {
-    max-width: 750px;
-    opacity: 0.8;
+    max-width: 70ch;
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    opacity: 0.85;
 }
 
 /* ---------- MEDIA LAYOUT ---------- */
 .media-row {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: clamp(1.2rem, 3vw, 2.5rem);
 }
 
 .media-box {
-    width: 260px;
-    height: 260px;
+    aspect-ratio: 1 / 1;
     background: linear-gradient(135deg, #111, #333);
-    border-radius: 14px;
-    transition: 0.4s ease;
+    border-radius: clamp(10px, 2vw, 16px);
+    transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .media-box.wide {
-    width: 100%;
-    max-width: 900px;
-    height: 460px;
+    aspect-ratio: 16 / 9;
 }
 
 .media-box:hover {
-    opacity: 0.4;
-    transform: scale(0.97);
+    opacity: 0.45;
+    transform: scale(0.96);
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px) {
-    .project-section {
-        padding: 70px 6%;
-    }
+/* ---------- SCROLL FEEL (SUBTLE) ---------- */
+section {
+    scroll-margin-top: 4rem;
+}
 
-    .media-row {
-        justify-content: center;
-    }
-
-    .media-box,
-    .media-box.wide {
-        width: 100%;
-        height: 240px;
+/* ---------- MOBILE REFINEMENT ---------- */
+@media (max-width: 480px) {
+    .hero h1 {
+        letter-spacing: 0.08em;
     }
 }
