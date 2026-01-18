@@ -1,3 +1,6 @@
+/* ---------- IMPORT FONT ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
 /* ---------- GLOBAL RESET ---------- */
 * {
     margin: 0;
@@ -13,7 +16,7 @@
 body {
     background: radial-gradient(circle at top, #1a1a1a, #000);
     color: #f2f2f2;
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Short Stack', cursive;
     line-height: 1.8;
 }
 
@@ -23,6 +26,7 @@ h2,
 h3,
 .small-title {
     text-transform: uppercase;
+    font-family: 'Short Stack', cursive;
 }
 
 /* ---------- HERO ---------- */
@@ -95,6 +99,11 @@ h3,
 .media-box:hover {
     opacity: 0.45;
     transform: scale(0.96);
+}
+
+/* ---------- SCROLL / MARGIN ---------- */
+section {
+    scroll-margin-top: 4rem;
 }
 
 /* ---------- MOBILE REFINEMENT ---------- */
